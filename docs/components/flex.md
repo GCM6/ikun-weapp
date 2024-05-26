@@ -18,7 +18,7 @@
 
 通过 `vertical` 属性设置主轴为垂直方向。
 
-```html
+```wxml
 <k-flex vertical>
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -29,7 +29,7 @@
 
 通过 `justify` 属性设置主轴方向的对齐方式。
 
-```html
+```wxml
 <k-flex justify="center">
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -38,7 +38,7 @@
 
 通过 `align` 属性设置交叉轴方向的对齐方式。
 
-```html
+```wxml
 <k-flex align="center">
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -49,7 +49,7 @@
 
 通过 `gap` 属性设置元素之间的间隙，支持 `small`、`middle`、`large` 三种尺寸。
 
-```html
+```wxml
 <k-flex gap="small">
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -60,7 +60,7 @@
 
 通过 `wrap` 属性设置元素换行方式。
 
-```html
+```wxml
 <k-flex gap="small" wrap>
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>

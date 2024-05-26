@@ -14,50 +14,18 @@
 
 ## 代码示例
 
-### 基础用法
-
-通过 `visible` 属性控制遮罩显示/隐藏。
-
-::: code-group
-
-```html [WXML]
-<k-button bind:click="handleClick">Open</k-button>
-
-<k-overlay visible="{{ visible }}" bind:click="handleOverlayClick" />
-```
-
-```javascript [JS]
-Component({
-  data: {
-    visible: false,
-  },
-
-  methods: {
-    handleClick() {
-      this.setData({ visible: true });
-    },
-
-    handleOverlayClick(event) {
-      this.setData({ visible: event.detail.visible });
-    },
-  },
-});
-```
-
-:::
-
 ## API
 
 ### 属性
 
-| 参数       | 说明                 | 类型            | 默认值                       |
-| ---------- | -------------------- | --------------- | ---------------------------- |
-| k-id       | 根节点 id            | String          | -                            |
-| style      | 根结点样式           | String          | -                            |
-| visible    | 是否显示遮罩         | Boolean         | false                        |
-| duration   | 动画时长，单位为毫秒 | Object / Number | \{ enter: 300, leave: 300 \} |
-| lockScroll | 防止滚动穿透         | Boolean         | true                         |
-| zIndex     | z-index 层级         | Number          | 11000                        |
+| 参数        | 说明                 | 类型            | 默认值                       |
+| ----------- | -------------------- | --------------- | ---------------------------- |
+| k-id        | 根节点 id            | String          | -                            |
+| style       | 根结点样式           | String          | -                            |
+| open        | 是否显示遮罩         | Boolean         | false                        |
+| duration    | 动画时长，单位为毫秒 | Object / Number | \{ enter: 300, leave: 300 \} |
+| lock-scroll | 防止滚动穿透         | Boolean         | true                         |
+| z-index     | z-index 层级         | Number          | 11000                        |
 
 ### 事件
 

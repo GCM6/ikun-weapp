@@ -42,7 +42,7 @@ export default defineConfig({
             { text: 'Icon 图标', link: '/components/icon' },
             { text: 'Space 间距', link: '/components/space' },
             { text: 'Flex 弹性布局', link: '/components/flex' },
-            { text: 'Spin 加载', link: '/components/spin' },
+            { text: 'Spinner 加载', link: '/components/spinner' },
           ],
         },
         {
@@ -125,5 +125,12 @@ export default defineConfig({
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+  },
+
+  markdown: {
+    languageAlias: {
+      wxml: 'html',
+      wxss: 'css',
+    },
   },
 });

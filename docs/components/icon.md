@@ -18,7 +18,7 @@
 
 通过 `name` 属性设置图标名称，也可以传入图片链接。
 
-```html
+```wxml
 <k-icon name="close" />
 ```
 
@@ -26,7 +26,7 @@
 
 通过 `color` 属性设置图标颜色。
 
-```html
+```wxml
 <k-icon name="close" color="#006fee" />
 ```
 
@@ -34,7 +34,7 @@
 
 通过 `size` 属性设置图标大小。
 
-```html
+```wxml
 <k-icon name="close" size="32px" />
 ```
 

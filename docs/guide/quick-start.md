@@ -52,6 +52,6 @@ npm install kite-weapp
 
 引入组件后，可以在 `wxml` 中直接使用组件。
 
-```html
+```wxml
 <k-button color="primary">Button</k-button>
 ```

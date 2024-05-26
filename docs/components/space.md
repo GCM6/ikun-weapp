@@ -18,7 +18,7 @@
 
 通过 `vertical` 属性设置间距为垂直方向。
 
-```html
+```wxml
 <k-space vertical>
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -29,7 +29,7 @@
 
 通过 `align` 属性设置对齐方式。
 
-```html
+```wxml
 <k-space align="center">
   <k-button color="primary">Button</k-button>
   <k-button color="primary" size="large">Button</k-button>
@@ -40,7 +40,7 @@
 
 通过 `size` 属性设置元素之间的间距大小，支持 `default`、`middle`、`large` 三种尺寸。
 
-```html
+```wxml
 <k-space size="large">
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>
@@ -51,7 +51,7 @@
 
 通过 `wrap` 属性设置元素自动换行。
 
-```html
+```wxml
 <k-space wrap>
   <k-button color="primary">Button</k-button>
   <k-button color="primary">Button</k-button>

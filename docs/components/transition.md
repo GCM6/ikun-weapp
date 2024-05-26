@@ -20,13 +20,13 @@
 
 ::: code-group
 
-```html [WXML]
+```wxml [WXML]
 <k-transition visible="{{ visible }}" name="fade">
   <text>Content</text>
 </k-transition>
 ```
 
-```css [WXSS]
+```wxss [WXSS]
 .k-fade-enter-active,
 .k-fade-leave-active {
   transition-property: opacity;
@@ -44,7 +44,7 @@
 
 通过 `name` 属性设置动画名称，transition 组件内部会根据动画名称生成相应的过渡样式类。
 
-```html
+```wxml
 <k-transition name="rotate" />
 ```
 
@@ -52,7 +52,7 @@
 
 通过 `duration` 属性设置动画时长，`enter` 与 `leave` 属性分别用于控制进场与离场动画时长。
 
-```html
+```wxml
 <k-transition duration="{{ enter: 300, leave: 500 }}" />
 ```
 

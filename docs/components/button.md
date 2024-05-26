@@ -18,7 +18,7 @@
 
 通过 `color` 属性设置颜色，支持 `default`、`primary`、`warning`、`danger`、`success` 五种颜色。
 
-```html
+```wxml
 <k-button>Default</k-button>
 <k-button color="primary">Primary</k-button>
 <k-button color="warning">Warning</k-button>
@@ -30,7 +30,7 @@
 
 通过 `size` 属性设置尺寸，支持 `small`、`default`、`large` 三种尺寸。
 
-```html
+```wxml
 <k-button size="small">Small</k-button>
 <k-button>Default</k-button>
 <k-button size="large">Large</k-button>
@@ -40,7 +40,7 @@
 
 通过 `variant` 属性设置变体，支持 `clear`、`default`、`outline` 三种变体，将呈现标准变体、文字变体与镂空变体。
 
-```html
+```wxml
 <k-button variant="clear">Clear</k-button>
 <k-button>Default</k-button>
 <k-button variant="outline">Outline</k-button>
@@ -50,7 +50,7 @@
 
 通过 `disabled` 属性禁用按钮，此时按钮不可点击。
 
-```html
+```wxml
 <k-button disabled>Button</k-button>
 ```
 
@@ -58,7 +58,7 @@
 
 通过 `loading` 属性使按钮呈现加载状态，此时按钮不可点击。
 
-```html
+```wxml
 <k-button loading>Button</k-button>
 ```
 
@@ -66,7 +66,7 @@
 
 通过 `icon` 属性设置图标，支持 Icon 组件里的所有图标，也可以传入图片链接。
 
-```html
+```wxml
 <k-button icon="add">Button</k-button>
 ```
 
@@ -74,7 +74,7 @@
 
 通过 `shape` 属性设置形状，支持 `default`、`round`、`circle` 三种形状，将呈现标准形状、圆角形状和圆形形状。
 
-```html
+```wxml
 <k-button>Default</k-button>
 <k-button shape="round">Round</k-button>
 <k-button icon="add" shape="circle" />
@@ -84,7 +84,7 @@
 
 通过 `expand` 属性设置展开，支持 `default`、`block`、`full` 三种展开，将呈现标准展开、块状展开和块状直角展开。
 
-```html
+```wxml
 <k-button>Default</k-button>
 <k-button expand="block">Block</k-button>
 <k-button expand="full">Full</k-button>
@@ -103,7 +103,7 @@
 | variant                     | 按钮变体，可选值为 `clear`、`outline`                                                                               | String  | -            |
 | disabled                    | 是否禁用按钮                                                                                                        | Boolean | -            |
 | loading                     | 是否呈现加载状态                                                                                                    | Boolean | -            |
-| icon                        | 左侧图标名称或图片链接，可选值见 Icon 组件称                                                                        | String  | -            |
+| icon                        | 左侧图标名称或图片链接，可选值见 Icon 组件                                                                          | String  | -            |
 | shape                       | 按钮形状，可选值为 `round`、`circle`                                                                                | String  | -            |
 | expand                      | 按钮展开，可选值为 `block`、`full`                                                                                  | String  | -            |
 | lang                        | 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文                                                     | String  | en           |
@@ -111,7 +111,7 @@
 | hover-stop-propagation      | 指定是否阻止本节点的祖先节点出现点击态                                                                              | Boolean | -            |
 | hover-start-time            | 按住多久后出现点击态，单位毫秒                                                                                      | Number  | 20           |
 | hover-stay-time             | 手指松开后点击态保留时间，单位毫秒                                                                                  | Number  | 70           |
-| open-type                   | 微信开放能力，具体支持可参考 [微信官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html)        | String  | -            |
+| open-type                   | 微信开放能力，具体支持可参考 [微信官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.wxml)        | String  | -            |
 | session-form                | 会话来源，open-type="contact" 时有效                                                                                | String  | -            |
 | send-message-title          | 会话内消息卡片标题，open-type="contact" 时有效                                                                      | String  | 当前标题     |
 | send-message-path           | 会话内消息卡片点击跳转小程序路径，open-type="contact" 时有效                                                        | String  | 当前分享路径 |

@@ -19,7 +19,7 @@
 
 通过 `title` 属性设置标题，`label` 属性设置描述文案，`value` 属性设置内容信息。
 
-```html
+```wxml
 <k-cell title="Title" label="Description" value="Content" />
 ```
 
@@ -27,7 +27,7 @@
 
 通过 `center` 属性设置内容信息垂直居中。
 
-```html
+```wxml
 <k-cell title="Title" label="Description" value="Content" center />
 ```
 
@@ -35,7 +35,7 @@
 
 通过 `size` 属性设置尺寸，支持 `default`、`large` 两种尺寸。
 
-```html
+```wxml
 <k-cell title="Title" label="Description" />
 <k-cell title="Title" label="Description" size="large" />
 ```
@@ -44,13 +44,13 @@
 
 通过 `icon` 属性设置标题左侧图标。
 
-```html
+```wxml
 <k-cell title="Title" icon="add" />
 ```
 
 通过 `arrow` 属性设置内容信息右侧显示箭头。
 
-```html
+```wxml
 <k-cell title="Title" arrow />
 ```
 
@@ -58,7 +58,7 @@
 
 通过 `clickable` 属性设置是否显示点击反馈。
 
-```html
+```wxml
 <k-cell title="Title" arrow clickable />
 ```
 
@@ -66,7 +66,7 @@
 
 通过 `url` 属性设置跳转链接，`open-type` 属性设置跳转方式，
 
-```html
+```wxml
 <k-cell title="Home" url="/pages/index/index" arrow clickable />
 ```
 
@@ -74,7 +74,7 @@
 
 使用 cell-croup 组件可以给 cell 组件分组，并为其添加下边框。
 
-```html
+```wxml
 <k-cell-group>
   <k-cell title="Title" />
   <k-cell title="Title" />
@@ -83,7 +83,7 @@
 
 通过 `title` 属性设置分组标题。
 
-```html
+```wxml
 <k-cell-group title="Group Title">
   <k-cell title="Title" />
   <k-cell title="Title" />
@@ -94,7 +94,7 @@
 
 通过 `variant` 属性设置变体，支持 `default`、`card` 两种变体，将呈现标准变体与卡片变体。
 
-```html
+```wxml
 <k-cell-group>
   <k-cell title="Title" />
   <k-cell title="Title" />
@@ -110,7 +110,7 @@
 
 如果以上用法不能满足你的需求，可以使用对应的插槽来自定义显示的内容。
 
-```html
+```wxml
 <k-cell>
   <k-icon slot="icon" name="add" />
   <text slot="title">Title</text>

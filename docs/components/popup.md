@@ -18,25 +18,24 @@
 
 ### 属性
 
-| 参数            | 说明                                                            | 类型            | 默认值                       |
-| --------------- | --------------------------------------------------------------- | --------------- | ---------------------------- |
-| k-id            | 根节点 id                                                       | String          | -                            |
-| style           | 根结点样式                                                      | String          | -                            |
-| visible         | 是否显示弹出层                                                  | Boolean         | false                        |
-| placement       | 弹出的方向，可选值为 `top`、`right`、`bottom`、`left`、`center` | String          | center                       |
-| overlay         | 是否显示遮罩                                                    | Boolean         | true                         |
-| overlayClosable | 点击遮罩是否关闭弹出层                                          | Boolean         | true                         |
-| duration        | 动画时长，单位为毫秒                                            | Object / Number | \{ enter: 300, leave: 300 \} |
-| lockScroll      | 防止滚动穿透                                                    | Boolean         | true                         |
-| shape           | 弹出层形状，可选值为 `round`                                    | String          | -                            |
-| zIndex          | z-index 层级                                                    | Number          | 11000                        |
+| 参数             | 说明                                                            | 类型            | 默认值                       |
+| ---------------- | --------------------------------------------------------------- | --------------- | ---------------------------- |
+| k-id             | 根节点 id                                                       | String          | -                            |
+| style            | 根结点样式                                                      | String          | -                            |
+| open             | 是否显示弹出层                                                  | Boolean         | false                        |
+| placement        | 弹出的方向，可选值为 `top`、`right`、`bottom`、`left`、`center` | String          | center                       |
+| overlay          | 是否显示遮罩                                                    | Boolean         | true                         |
+| overlay-closable | 点击遮罩是否关闭弹出层                                          | Boolean         | true                         |
+| duration         | 动画时长，单位为毫秒                                            | Object / Number | \{ enter: 300, leave: 300 \} |
+| shape            | 弹出层形状，可选值为 `round`                                    | String          | -                            |
+| z-index          | z-index 层级                                                    | Number          | 11000                        |
 
 ### 事件
 
-| 事件名        | 说明                     | 参数 |
-| ------------- | ------------------------ | ---- |
-| close         | 点击遮罩或关闭按钮时触发 | -    |
-| click-overlay | 点击遮罩时触发           | -    |
+| 事件名        | 说明           | 参数 |
+| ------------- | -------------- | ---- |
+| close         | 关闭时触发     | -    |
+| click-overlay | 点击遮罩时触发 | -    |
 
 ### 外部样式类
 

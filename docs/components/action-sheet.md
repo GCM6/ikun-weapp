@@ -18,17 +18,38 @@
 
 ### 属性
 
-| 参数    | 说明             | 类型    | 默认值 |
-| ------- | ---------------- | ------- | ------ |
-| k-id    | 根节点 id        | String  | -      |
-| style   | 根结点样式       | String  | -      |
-| visible | 是否显示动作面板 | Boolean | false  |
+| 参数             | 说明                   | 类型            | 默认值                       |
+| ---------------- | ---------------------- | --------------- | ---------------------------- |
+| k-id             | 根节点 id              | String          | -                            |
+| style            | 根结点样式             | String          | -                            |
+| open             | 是否显示动作面板       | Boolean         | false                        |
+| options          | 选项配置               | Array           | -                            |
+| title            | 标题                   | String / Slot   | -                            |
+| sub-title        | 副标题                 | String / Slot   | -                            |
+| cancel-text      | 取消按钮文本           | String / Slot   | -                            |
+| overlay          | 是否显示遮罩           | Boolean         | true                         |
+| overlay-closable | 点击遮罩是否关闭弹出层 | Boolean         | true                         |
+| duration         | 动画时长，单位为毫秒   | Object / Number | \{ enter: 300, leave: 300 \} |
+| z-index          | z-index 层级           | Number          | 11000                        |
+
+#### Option 属性
+
+| 参数     | 说明         | 类型    |
+| -------- | ------------ | ------- |
+| label    | 文本         | String  |
+| value    | 选值         | String  |
+| color    | 颜色         | String  |
+| disabled | 是否禁用     | Boolean |
+| class    | 额外的样式类 | String  |
 
 ### 事件
 
-| 事件名 | 说明           | 参数 |
-| ------ | -------------- | ---- |
-| click  | 点击遮罩时触发 | -    |
+| 事件名        | 说明                                   | 参数 |
+| ------------- | -------------------------------------- | ---- |
+| select        | 选中选项时触发，选项禁用状态下不会触发 | -    |
+| cancel        | 点击取消按钮时触发                     | -    |
+| close         | 关闭时触发                             | -    |
+| click-overlay | 点击遮罩时触发                         | -    |
 
 ### 外部样式类
 
