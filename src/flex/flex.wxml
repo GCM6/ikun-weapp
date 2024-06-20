@@ -1,9 +1,10 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="./flex.wxs" module="computed" />
 
 <view
   id="{{ kId }}"
-  style="{{ style }}"
-  class="{{ utils.bem('k-flex', [justify, align, gap, wrap, { vertical }]) }} k-class"
+  style="{{ computed.cardStyle({ style, gap }) }}"
+  class="k-class {{ computed.cardClass({justify, wrap, align, gap, vertical}) }} "
 >
   <slot />
 </view>

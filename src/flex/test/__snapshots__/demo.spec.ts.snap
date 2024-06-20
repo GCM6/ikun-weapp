@@ -29,7 +29,7 @@ exports[`should render demo and match snapshot 1`] = `
       title="垂直布局"
     >
       <k-flex
-        gap="sm"
+        gap="small"
         vertical="{{true}}"
       >
         <k-button>
@@ -52,9 +52,9 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-flex
         align="center"
-        gap="sm"
-        justify="center"
-        kClass="layout"
+        gap="small"
+        justify="flex-start"
+        kClass="layout box"
       >
         <k-button>
           Default
@@ -72,10 +72,31 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
-      title="间距"
+      title="间距-default"
     >
       <k-flex
-        gap="lg"
+        gap="middle"
+      >
+        <k-button>
+          small
+        </k-button>
+        <k-button
+          color="primary"
+        >
+          middle
+        </k-button>
+        <k-button
+          color="success"
+        >
+          large
+        </k-button>
+      </k-flex>
+    </demo-block>
+    <demo-block
+      title="间距-customize"
+    >
+      <k-flex
+        gap="{{10}}"
       >
         <k-button>
           Default
@@ -89,6 +110,16 @@ exports[`should render demo and match snapshot 1`] = `
           color="success"
         >
           Success
+        </k-button>
+        <k-button
+          color="warning"
+        >
+          Warning
+        </k-button>
+        <k-button
+          color="danger"
+        >
+          Danger
         </k-button>
       </k-flex>
     </demo-block>
@@ -96,9 +127,9 @@ exports[`should render demo and match snapshot 1`] = `
       title="自动换行"
     >
       <k-flex
-        gap="sm"
+        gap="{{10}}"
         kClass="layout"
-        wrap="wrap"
+        wrap="{{true}}"
       >
         <k-button>
           Default
