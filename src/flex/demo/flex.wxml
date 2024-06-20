@@ -6,31 +6,41 @@
   </demo-block>
 
   <demo-block title="垂直布局">
-    <k-flex gap="sm" vertical>
-      <k-button type="primary">Primary</k-button>
-      <k-button type="secondary">Secondary</k-button>
-      <k-button type="success">Success</k-button>
+    <k-flex gap="small" vertical>
+      <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
+      <k-button color="success">Success</k-button>
     </k-flex>
   </demo-block>
 
   <demo-block title="对齐方式">
-    <k-flex justify="center" align="center" gap="sm" k-class="layout">
-      <k-button type="primary">Primary</k-button>
-      <k-button type="secondary">Secondary</k-button>
-      <k-button type="success">Success</k-button>
+    <k-flex justify="flex-start" align="center" gap="small" k-class="layout box">
+      <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
+      <k-button color="success">Success</k-button>
     </k-flex>
   </demo-block>
 
-  <demo-block title="间距">
-    <k-flex gap="lg">
-      <k-button type="primary">Primary</k-button>
-      <k-button type="secondary">Secondary</k-button>
-      <k-button type="success">Success</k-button>
+  <demo-block title="间距-default">
+    <k-flex gap="middle">
+      <k-button>small</k-button>
+      <k-button color="primary">middle</k-button>
+      <k-button color="success">large</k-button>
+    </k-flex>
+  </demo-block>
+
+  <demo-block title="间距-customize">
+    <k-flex gap="{{ 10 }}">
+      <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
+      <k-button color="success">Success</k-button>
+      <k-button color="warning">Warning</k-button>
+      <k-button color="danger">Danger</k-button>
     </k-flex>
   </demo-block>
 
   <demo-block title="自动换行">
-    <k-flex wrap="wrap" gap="sm" k-class="layout">
+    <k-flex wrap gap="{{10}}" k-class="layout">
       <k-button>Default</k-button>
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>

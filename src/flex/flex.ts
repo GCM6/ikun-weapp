@@ -8,12 +8,18 @@ KComponent({
 
     vertical: Boolean,
 
-    wrap: String,
+    wrap: {
+      type: Boolean,
+      optionalTypes: [String],
+    },
 
     justify: String,
 
     align: String,
 
-    gap: String,
+    gap: {
+      type: String,
+      optionalTypes: [Number],
+    },
   },
 });

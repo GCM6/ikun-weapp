@@ -1,0 +1,48 @@
+var utils = require('../shared/wxs/utils.wxs');
+var object = require('../shared/wxs/object.wxs');
+
+function cardStyle(data) {
+  var style = {};
+
+  if (typeof data.gap === 'number') {
+    style.gap = utils.addUnit(data.gap);
+  }
+
+  return utils.style([style, data.style]);
+}
+
+function cardClass(data) {
+  var classList = [data.gap];
+  var map = {
+    justify: {
+      'flex-start': 'justify-start',
+      center: 'justify-center',
+      'flex-end': 'justify-end',
+    },
+    align: {
+      'flex-start': 'align-start',
+      center: 'align-center',
+      'flex-end': 'align-end',
+    },
+  };
+
+  object.keys(data).forEach(function (key) {
+    if (typeof data[key] === 'boolean') {
+      var obj = {};
+      obj[key] = data[key];
+      classList.push(obj);
+    }
+
+    if (typeof data[key] === 'string') {
+      if (map[key]) {
+        classList.push(map[key][data[key]]);
+      } else {
+        classList.push(data[key]);
+      }
+    }
+  });
+
+  return utils.bem('k-flex', classList);
+}
+
+module.exports = { cardStyle: cardStyle, cardClass: cardClass };
