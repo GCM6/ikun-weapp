@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 import transition from '../mixins/transition';
 
 KComponent({
@@ -22,11 +22,11 @@ KComponent({
     ariaLabel: String,
   },
 
-  behaviors: [transition('fade')],
+  behaviors: [transition({ visibleProperty: 'open', name: 'fade' })],
 
   methods: {
     onTap() {
-      this.triggerEvent('click', { visible: !this.data.visible });
+      this.triggerEvent('click', { open: !this.data.open });
     },
 
     noop() {},

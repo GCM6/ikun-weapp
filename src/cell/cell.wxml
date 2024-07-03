@@ -1,11 +1,11 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
 
 <view
   id="{{ kId }}"
   style="{{ style }}"
-  class="{{ utils.bem('k-cell', [size, { center, borderless: !border, clickable, required }]) }} k-class"
+  class="{{ utils.bem('k-cell', [size, { center, border, clickable }]) }} k-class"
   hover-stay-time="70"
-  hover-class="k-cell--hover {{ clickable ? 'hover-class' : '' }}"
+  hover-class="k-cell--active {{ clickable ? 'hover-class' : '' }}"
   bind:tap="onTap"
   aria-role="{{ ariaRole || (arrow ? 'button' : '') }}"
   aria-label="{{ ariaLabel }}"

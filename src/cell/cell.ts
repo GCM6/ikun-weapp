@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
   externalClasses: ['hover-class', 'title-class', 'label-class', 'value-class'],
@@ -14,8 +14,6 @@ KComponent({
 
     value: String,
 
-    icon: String,
-
     size: String,
 
     center: Boolean,
@@ -25,11 +23,11 @@ KComponent({
       value: true,
     },
 
-    clickable: Boolean,
-
-    required: Boolean,
+    icon: String,
 
     arrow: Boolean,
+
+    clickable: Boolean,
 
     url: String,
 
@@ -51,6 +49,7 @@ KComponent({
 
     navigate() {
       const { url, openType } = this.data;
+
       if (url) {
         (wx as any)[openType]({ url });
       }

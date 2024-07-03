@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 import transition from '../mixins/transition';
 
 KComponent({
@@ -13,13 +13,6 @@ KComponent({
       observer: 'observePlacement',
     },
 
-    shape: String,
-
-    zIndex: {
-      type: Number,
-      value: 11000,
-    },
-
     overlay: {
       type: Boolean,
       value: true,
@@ -30,7 +23,14 @@ KComponent({
       value: true,
     },
 
+    shape: String,
+
     closable: Boolean,
+
+    zIndex: {
+      type: Number,
+      value: 11000,
+    },
 
     lockScroll: {
       type: Boolean,
@@ -38,7 +38,7 @@ KComponent({
     },
   },
 
-  behaviors: [transition()],
+  behaviors: [transition({ visibleProperty: 'open' })],
 
   lifetimes: {
     created() {

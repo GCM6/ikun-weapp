@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
   properties: {
@@ -6,32 +6,32 @@ KComponent({
 
     style: String,
 
-    visible: Boolean,
-
-    zIndex: {
-      type: Number,
-      value: 11000,
-    },
-
-    overlay: {
-      type: Boolean,
-      value: true,
-    },
-
-    title: String,
-
-    subTitle: String,
+    open: Boolean,
 
     options: {
       type: Array,
       value: [],
     },
 
+    title: String,
+
+    subTitle: String,
+
     cancelText: String,
+
+    overlay: {
+      type: Boolean,
+      value: true,
+    },
 
     overlayClosable: {
       type: Boolean,
       value: true,
+    },
+
+    zIndex: {
+      type: Number,
+      value: 11000,
     },
   },
 
@@ -41,9 +41,8 @@ KComponent({
       const { options } = this.data;
       const item = options[index];
 
-      if (item) {
-        this.triggerEvent('selected', { selected: item, index });
-      }
+      if (item.disabled) return;
+      this.triggerEvent('selected', { selected: item, index });
     },
 
     onCancel() {

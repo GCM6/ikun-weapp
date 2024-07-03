@@ -1,28 +1,32 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
-  externalClasses: ['hover-class'],
+  externalClasses: ['hover-class', 'k-icon-class', 'k-loading-class'],
 
   properties: {
     kId: String,
 
-    color: String,
+    style: String,
 
     type: String,
 
-    variant: String,
-
     size: String,
 
-    style: String,
-
-    expand: String,
+    variant: String,
 
     disabled: Boolean,
 
     loading: Boolean,
 
     icon: String,
+
+    shape: String,
+
+    expand: String,
+
+    formType: String,
+
+    openType: String,
 
     hoverStopPropagation: Boolean,
 
@@ -35,15 +39,6 @@ KComponent({
       type: Number,
       value: 70,
     },
-
-    lang: {
-      type: String,
-      value: 'en',
-    },
-
-    openType: String,
-
-    shape: String,
 
     sessionFrom: String,
 
@@ -58,6 +53,11 @@ KComponent({
     appParameter: String,
 
     phoneNumberNoQuotaToast: Boolean,
+
+    lang: {
+      type: String,
+      value: 'en',
+    },
 
     ariaLabel: String,
   },
@@ -93,9 +93,7 @@ KComponent({
     },
 
     chooseavatar(
-      event: WechatMiniprogram.CustomEvent<
-        WechatMiniprogram.GeneralCallbackResult & { avatarUrl: string }
-      >
+      event: WechatMiniprogram.CustomEvent<WechatMiniprogram.GeneralCallbackResult & { avatarUrl: string }>
     ) {
       this.triggerEvent('chooseavatar', event.detail);
     },

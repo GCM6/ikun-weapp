@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
   externalClasses: ['title-class'],
@@ -6,10 +6,10 @@ KComponent({
   properties: {
     kId: String,
 
+    style: String,
+
     title: String,
 
     variant: String,
-
-    style: String,
   },
 });

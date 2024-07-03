@@ -11,14 +11,14 @@ exports[`should render demo and match snapshot 1`] = `
       title="基础用法"
     >
       <k-button
-        color="primary"
+        type="primary"
         variant="clear"
         bind:click="onClickBasicOpen"
       >
         Open
       </k-button>
       <k-action-sheet
-        cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
@@ -31,7 +31,6 @@ exports[`should render demo and match snapshot 1`] = `
             },
           ]
         }}"
-        visible="{{false}}"
         bind:close="onClickBasicClose"
         bind:selected="onSelect"
       />
@@ -40,7 +39,7 @@ exports[`should render demo and match snapshot 1`] = `
       title="选项颜色"
     >
       <k-button
-        color="primary"
+        type="primary"
         variant="clear"
         bind:click="onClickColorOpen"
       >
@@ -48,21 +47,21 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
-              "color": "danger",
+              "color": "var(--k-danger-color)",
               "label": "Delete",
               "value": 0,
             },
             {
-              "color": "primary",
+              "color": "var(--k-primary-color)",
               "label": "Share",
               "value": 1,
             },
           ]
         }}"
-        visible="{{false}}"
         bind:close="onClickColorClose"
       />
     </demo-block>
@@ -70,7 +69,7 @@ exports[`should render demo and match snapshot 1`] = `
       title="选项状态"
     >
       <k-button
-        color="primary"
+        type="primary"
         variant="clear"
         bind:click="onClickStateOpen"
       >
@@ -78,22 +77,22 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
-              "color": "danger",
+              "color": "var(--k-danger-color)",
               "disabled": true,
               "label": "Delete",
               "value": 0,
             },
             {
-              "color": "primary",
+              "color": "var(--k-primary-color)",
               "label": "Share",
               "value": 1,
             },
           ]
         }}"
-        visible="{{false}}"
         bind:close="onClickStateClose"
       />
     </demo-block>
@@ -101,7 +100,7 @@ exports[`should render demo and match snapshot 1`] = `
       title="标题信息"
     >
       <k-button
-        color="primary"
+        type="primary"
         variant="clear"
         bind:click="onClickTitleOpen"
       >
@@ -109,22 +108,20 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
-              "color": "danger",
               "label": "Delete",
               "value": 0,
             },
             {
-              "color": "primary",
               "label": "Share",
               "value": 1,
             },
           ]
         }}"
         title="Actions"
-        visible="{{false}}"
         bind:close="onClickTitleClose"
       />
     </demo-block>
