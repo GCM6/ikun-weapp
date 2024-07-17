@@ -3,8 +3,8 @@
 
 <view
   id="{{ kId }}"
-  style="{{ computed.cardStyle({ style, gap }) }}"
-  class="k-class {{ computed.cardClass({justify, wrap, align, gap, vertical}) }} "
+  style="{{ computed.flexStyle({ gap, style }) }}"
+  class="k-class {{ computed.flexClass({justify, wrap, gap, align, vertical}) }} "
 >
   <slot />
 </view>

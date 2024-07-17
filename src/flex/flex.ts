@@ -19,7 +19,7 @@ KComponent({
 
     gap: {
       type: String,
-      optionalTypes: [Number],
+      optionalTypes: [Number, Array],
     },
   },
 });
